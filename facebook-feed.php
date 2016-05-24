@@ -154,6 +154,7 @@ class pemp_widget extends WP_Widget {
 						            	if ( strpos($link,'facebook' ) !== false ) {
 										    echo '<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F{$post_id}%2F&width=500&show_text=false&appId=943966015717044&height=281" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
 										} elseif (strpos($link,'youtube' ) !== false) {
+											//Make Youtube link into YT embed link
 											$replace = array( 'watch?v=', '&feature=youtu.be' );
 											$new = array( 'embed/', '' );
 											$youtube_url = str_ireplace ( $replace , $new , $link );
